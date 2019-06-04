@@ -15,6 +15,7 @@ jobs:
                pip install paramiko
                apt-get install -y python-subunit
                apt-get update
+               export tenant_id="master"
                python testcases.py
 #               export host_url="https://redstone-qe.dev.hpedevops.net"
 #               export username="shruthi.g.patil@hpe.com"
