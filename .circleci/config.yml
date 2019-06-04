@@ -18,6 +18,7 @@ jobs:
                export host_url="https://redstone-qe.dev.hpedevops.net"
                export username="rishwana-roshan.k@hpe.com"
                export password="Cloud@123"
+               export tenant_id="master"
                python testcases.py 
                
       - store-test_results:
