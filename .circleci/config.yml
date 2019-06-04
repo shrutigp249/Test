@@ -8,18 +8,19 @@ jobs:
       - run:
           name: Redstone 
           command: |
-               apt-get update
-               apt-get install -y python3.6
-               apt-get install -y python-pip
-               pip install requests
-               pip install paramiko
-               apt-get install -y python-subunit
-               apt-get update
+               #apt-get update
+               #apt-get install -y python3.6
+               #apt-get install -y python-pip
+               #pip install requests
+               #pip install paramiko
+               #apt-get install -y python-subunit
+               #apt-get update
                export host_url="https://redstone-qe.dev.hpedevops.net"
-               export username="rishwana-roshan.k@hpe.com"
+               export username="shruthi.g.patil@hpe.com"
                export password="Cloud@123"
                export tenant_id="master"
-               python -m subunit.run testcases.py          
+               python -m subunit.run testcases.py
+               
       - store-test_results:
           path: ./logs
       - store-artifacts:
