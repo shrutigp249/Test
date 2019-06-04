@@ -19,8 +19,7 @@ jobs:
                export username="rishwana-roshan.k@hpe.com"
                export password="Cloud@123"
                export tenant_id="master"
-               python testcases.py 
-               
+               python testcases.py          
       - store-test_results:
           path: ./logs
       - store-artifacts:
