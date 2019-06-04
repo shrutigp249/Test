@@ -15,10 +15,10 @@ jobs:
                pip install paramiko
                apt-get install -y python-subunit
                apt-get update
-               export host_url="https://redstone-qe.dev.hpedevops.net"
-               export username="shruthi.g.patil@hpe.com"
-               export password="Cloud@123"
-               export tenant_id="master"
+#               export host_url="https://redstone-qe.dev.hpedevops.net"
+#               export username="shruthi.g.patil@hpe.com"
+#               export password="Cloud@123"
+#               export tenant_id="master"
                python testcases.py
                
       - store-test_results:
