@@ -1,9 +1,26 @@
-version: 2.1
-
-orbs:
-    hello: circleci/hello-build@0.0.7 # uses the circleci/buildpack-deps Docker image
-
-workflows:
-    "Hello Workflow":
-        jobs:
-          - hello/hello-build
+version: 2
+ 	jobs:
+ 	build:
+ 	docker:
+ 	- image: ubuntu
+ 	steps:
+ 	- checkout
+ 	- run:
+ 	name: Redstone 
+ 	command: |
+ 	apt-get update
+ 	apt-get install -y python3.6
+ 	apt-get install -y python-pip
+ 	pip install requests
+ 	pip install paramiko
+ 	apt-get install -y python-subunit
+ 	apt-get update
+ 	export host_url="https://redstone-qe.dev.hpedevops.net"
+ 	export username="shruthi.g.patil@hpe.com"
+ 	export password="Cloud@123"
+ 	python testcases.py 
+ 	 
+ 	- store-test_results:
+ 	path: ./logs
+ 	- store-artifacts:
+ 	path: ./logs
